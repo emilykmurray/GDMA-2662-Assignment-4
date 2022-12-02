@@ -175,7 +175,7 @@ html {
 
 @media screen and (min-width: 1024px) {
         .wrapper {
-                width: 85%;
+                width: 75%;
         }
 
         [class*='col-'] {
@@ -271,7 +271,6 @@ footer > div:last-child li {
 #our-philosophy > div:last-child {
     background: url(../img/buddha.jpg) no-repeat center;
     background-size: cover;
-    padding: 10em;
 }
 
 #our-philosophy {
