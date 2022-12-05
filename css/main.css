@@ -39,19 +39,55 @@
 }
 
 html {
-    font-size: 1rem;
+    font-size: .95rem;
     font-family: 'Poppins', sans-serif;
-    line-height: 1.5rem;
+    line-height: 2rem;
+}
+
+@media screen and (min-width: 1024px) {
+ 
+    html {
+        font-size: 1rem;
+    }
 }
 
 /*--------------------------------------------------------------
     4.0 - ELEMENTS
 -------------------------------------------------------------- */
 
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+}
 
+li {
+    list-style-type: none;
+}
+
+nav li:first-child a {
+    color: #819D45;
+}
+
+@media screen and (min-width: 1024px) {
+ 
+    img {
+        margin-top: .35em;
+    }
+}
 
 /* ----- TYPOGRAPHY ----- */
 
+h1 {
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+
+    h1 {
+        text-align: left;
+    }
+}
 
 
 
@@ -175,7 +211,7 @@ html {
 
 @media screen and (min-width: 1024px) {
         .wrapper {
-                width: 75%;
+                width: 70%;
         }
 
         [class*='col-'] {
@@ -230,71 +266,382 @@ html {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-#kombucha div:first-child {
+#kombucha,
+#etiquette {
     background-color: #E9EFDB;
+    margin-bottom: 2em;
+}
+
+#etiquette li {
+    list-style-type: initial;
+    line-height: 2rem;
+    margin-bottom: 1.4em;
+}
+
+#etiquette ul {
+    padding-left: 0;
+}
+
+.lg-numbers {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #BDD191;
+    margin: .8em 0 .5em;
+}
+
+.border-green,
+.border-green-footer {
+    background-color: #BDD191;
+    margin: 0 auto;
+}
+
+.border-green {
+    padding: 1px;
+}
+
+.border-green-footer {
+    padding: .75px;
+}
+
+@media screen and (min-width: 1024px) {
+    .border-green-footer {
+        padding: 0;
+    }
+
+    .lg-numbers {
+        font-size: 4rem;
+        margin: .8em 0 .5em;
+    }
 }
 
 /* ----- HERO ----- */
 
-#hero-home {
+#hero-home > div:last-child ,
+#hero-our-classes > div:last-child {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+
+#hero-home > div:last-child {
     background: url(../img/hero-lg.jpg) no-repeat center;
     background-size: cover;
-    padding: 0 0 50em;
+    padding: 2em 0;
+}
+
+#hero-home p:first-child {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 2.3rem;
+    margin: 2em 1.5em 0em 0;
+    color: #272727;
+}
+
+#hero-our-classes > a:first-child {
+    margin-top: 2.5em;
+    text-align: center;
+}
+
+#hero-our-classes > div:last-child {
+    background: url(../img/succulent.jpg) no-repeat center;
+    background-size: cover;
+    padding: 10em 0;
+}
+
+@media screen and (min-width: 1024px) {
+    #hero-home p:first-child {
+        font-size: 3.5rem;
+        line-height: 4.4rem;
+        margin: 1em .5em .5em 0;
+        }
+    
+    #hero-home > div:last-child {
+        background: url(../img/hero-lg.jpg) no-repeat center;
+        background-size: cover;
+        padding: 14em 0 20em;
+        }
+
+    #hero-home img {
+        text-align: left;
+    }
 }
 
 /* ----- NAVIGATION ----- */
 
 nav li {
     display: inline-block;
-    text-decoration: none;
+    margin: 0 .5em .6em .5em;
+    letter-spacing: 1.5px;
+    font-size: .9em;
 }
 
-li {
-    list-style-type: none;
+nav a {
+    color: #5E5E5E;
+    letter-spacing: 2.5px;
 }
 
+nav ul {
+    text-align: center;
+    padding: 0;
+}
+
+nav li:first-child a {
+    color: #819D45;
+}
+
+@media screen and (min-width: 1024px) {
+
+    nav ul {
+        text-align: right;
+        margin-top: 2.2em;
+    }
+
+    nav a {
+        margin-left: 3em;
+        font-size: .8rem;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-bottom: 1em;
+        font-size: 1em;
+
+    }
+}
 
 /* ----- FOOTER ----- */
 
-footer div div:first-child {
-    background: url(../img/good-vibes-logo.jpg) no-repeat center;
-    background-size: contain;
-    padding: 1em 0em;
-}
 
 footer > div:last-child li {
     display: inline-block;
+    margin-top: 9.9em;
+}
+
+footer {
+    text-align: center;
+}
+
+footer ul {
+    padding-left: 0;
+    margin: .5em 0 1em;
+}
+
+footer img {
+    margin-top: 2em;
+}
+
+footer a {
+    letter-spacing: 1.5px;
+    font-size: .9em;
+    color: #5E5E5E;
+}
+
+@media screen and (min-width: 1024px) {
+    footer {
+        text-align: left;
+    }
+
+    footer ul {
+        margin: .5em 0 3em;
+    }
+
+    footer a {
+        letter-spacing: 2.5px;
+        line-height: 2.5rem;
+    }
 }
 
 /* ----- OUR PHILOSOPHY ----- */
 
-#our-philosophy > div:last-child {
-    background: url(../img/buddha.jpg) no-repeat center;
-    background-size: cover;
+#our-philosophy {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
 }
 
-#our-philosophy {
-    margin: 5em 0;
+#our-philosophy > div:last-child {
+    background: url(../img/buddha.jpg) no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    position: static;
+    top: 0px;
+    height: 255px;
+    width: 100%;
+    margin-bottom: 5em;
+}
+
+@media screen and (min-width: 1024px) {
+
+    #our-philosophy {
+        position: relative;
+        top: 0;
+        left: 0;
+        text-align: left;
+        }
+
+    #our-philosophy > div:last-child {
+        background: url(../img/buddha.jpg) no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        top: 0px;
+        left: 912px;
+        height: 596px;
+        width: 50%;
+    }
 }
 
 /* ----- MEMBERSHIPS ----- */
 
-#memberships > div:first-child {
+#memberships {
+    position: static;
+    top: 0;
+    left: 0;
+}
+
+#memberships > div:first-child div{
     background: url(../img/meditation.jpg) no-repeat center;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    position: static;
+    top: 0;
+    left: 0px;
+    height: 321px;
+    width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+
+    #memberships {
+        position: relative;
+        top: 0;
+        left: 841px;
+        margin: 8em 0;
+    }
+    
+    #memberships > div:first-child div{
+        background: url(../img/meditation.jpg) no-repeat center;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: -1008px;
+        height: 521px;
+        width: 69%;
+    }
+
+}
+
+
+/* ----- CLASS LEVELS ----- */
+
+#class-levels section:first-child > div,
+#class-levels section:nth-child(2) > div,
+#class-levels section:last-child > div {
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+    padding: 9em;
+}
+
+#class-levels section:first-child > div{
+    background: url(../img/outdoor-class.jpg);
     background-size: cover;
 }
+
+#class-levels section:nth-child(2) > div{
+    background: url(../img/stretch.jpg);
+    background-size: cover;
+}
+
+#class-levels section:last-child > div{
+    background: url(../img/yoga-class.jpg);
+    background-size: cover;
+}
+
+#class-levels section {
+    text-align: center;
+}
+
+#class-levels header + p {
+    margin-top: 0;
+}
+
+#class-levels > p:last-child {
+    text-align: center;
+}
+
+#class-levels h3 {
+    margin-bottom: .4em;
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+/* ----- CLASS GROUPINGS ----- */
+
+@media screen and (min-width: 1024px) {
+    #class-groupings{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#class-groupings > div:last-child {
+    background: url(../img/friends.jpg) no-repeat center;
+    background-size: auto;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: -125px;
+    height: 631px;
+    width: 50%;
+}
+}
+
+/* ----- CLASS GROUPINGS ----- */
 
 
 /*--------------------------------------------------------------
     7.0 - UTILITIES
 -------------------------------------------------------------- */
 
-[class^="fa"]{
-    color: #000;
+.btn {
+    background-color: #fff;
+    padding: 1em 3em;
+    color: #5E5E5E;
+    font-size: .55rem;
+    letter-spacing: 1px;
+    border: 1px solid #819D45;
+    -moz-border-radius: .4em;
+    -webkit-border-radius: .4em;
+    -o-radius: .4em;
+    -ms-border-radius: .4em;
+    border-radius: .4em;
 }
 
 [class^="fa"]{
-    font-size: 1.2rem;
+    color: #819D45;
+    font-size: 1.4rem;
+    margin-right: .3em;
 }
 
 .col-center {
@@ -308,5 +655,16 @@ footer > div:last-child li {
     width:1px;
     height:1px;
     overflow:hidden;
+}
+
+@media screen and (min-width: 1024px) {
+    [class^="fa"]{
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 1.1em 3.5em;
+        font-size: .75rem;
+    }
 }
 
