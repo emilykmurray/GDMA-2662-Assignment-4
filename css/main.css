@@ -80,9 +80,10 @@ li {
 
 /* ----- TYPOGRAPHY ----- */
 
+/* 
 h1 {
     text-align: left;
-}
+} */
 
 h2 {
     font-size: 1.5rem;
@@ -217,7 +218,7 @@ h2 {
 
 @media screen and (min-width: 1024px) {
         .wrapper {
-                width: 70%;
+                width: 85%;
         }
 
         [class*='col-'] {
@@ -271,16 +272,16 @@ h2 {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
+
 #our-philosophy,
 #memberships,
-#kombucha,
-#class-groupings,
-#etiquette {
+#class-groupings  {
     margin: 4em 0;
-}
+} 
 
 #kombucha,
 #etiquette {
+    margin: 4em 0 0;
     background-color: #E9EFDB;
     padding: 4em 0;
 }
@@ -290,10 +291,6 @@ h2 {
     font-weight: 700;
     color: #BDD191;
     margin: .8em 0 .5em;
-}
-
-#kombucha {
-    margin-top: 0;
 }
 
 #kombucha p:last-child {
@@ -315,7 +312,7 @@ h2 {
 
     .lg-numbers {
         font-size: 4rem;
-        margin: 1.5em 0 .8em;
+        /* margin: 1.5em 0 .8em; */
     }
 }
 
@@ -328,6 +325,8 @@ h2 {
 
 #hero-home h1 {
     margin: 1.25em 0 .25em 0;
+    text-align: left;
+    /* margin: 4em 0; */
 }
 
 #hero-home p:first-child {
@@ -342,98 +341,102 @@ h2 {
     margin-bottom: 2.8em;
 }
 
-#hero-home > div:nth-child(2) {
+#hero-home {
     background: url(../img/hero-lg.jpg) no-repeat center;
-    padding: 3em 0;
+    padding: 3em 0 0;
 }
 
-#hero-home > div:last-child {
+/* #hero-home .wrapper div:last-child {
     display: none;
+} */
+
+/* #hero-our-classes > div > div {
+    margin-top: 2.5em;
+} */
+
+#hero-our-classes  {
+    background: url(../img/succulent.jpg) no-repeat center;
+    /* padding: 3em 0; */
 }
 
 #hero-our-classes h1 {
-    margin: 0 0 1em .75em;
+    margin: 3em 0;
 }
 
-#hero-our-classes > div > div {
-    margin-top: 2.5em;
-}
-
-#hero-our-classes > div:last-child {
-    background: url(../img/succulent.jpg) no-repeat center;
+/* #hero-our-classes h1 {
     padding: 3em 0;
-}
+} */
 
 #hero-our-classes nav ul {
     margin: 1.15em 0 1.4em;
 }
 
 @media screen and (min-width: 768px) {
+
+    #hero-home {
+        padding: 3em;
+    }
+
     #hero-home p:first-child {  
-    margin: 2em 1.5em 0em 1em;
-    font-size: 2.4rem;
-    line-height: 3.3rem;
+        /* margin: 2em 1.5em 0em 1em; */
+        font-size: 2.4rem;
+        line-height: 3.3rem;
     }
 
-    #hero-home > div:nth-child(2) {
-        padding: 3em 0 3em 1em;
-    }
-
-    #hero-home p:last-child {
+    /* #hero-home p:last-child {
         margin-left: 2.2em;
-    }
+    } */
 }
 
 @media screen and (min-width: 1024px) {
+
+    #hero-home {
+        padding: 12em 0 1em;
+    }
 
     #hero-home h1 {
         margin-top: .8em;
     }
 
-    #hero-home img {
+    /* #hero-home img {
         text-align: left;
-    }
+    } */
     
     #hero-home p:first-child {
         font-size: 3.5rem;
         line-height: 4.4rem;
-        margin: 1em .5em .5em 0;
+        /* margin: 5em .5em 0.5em 0; */
     }
 
     #hero-home p:last-child {
         margin: 3em 0 0;
     }
-    
-    #hero-home > div:nth-child(2){
-        padding: 14em 0 20em;
-    }
 
-    #hero-home > div:last-child {
-        position: absolute;
-        display: initial;
-        top: 30em;
-        left: 53em;
+    #hero-home .wrapper div:last-child {
+        display: block;
+        text-align: center;
+        margin-top: 13em;
     }
 
     #hero-our-classes h1 {
-        margin: .5em 0 .3em 5.5em;
         font-size: 3em;
+        /* margin: 3em 0; */
     }
     
-    #hero-our-classes > div > div {
+    /* #hero-our-classes > div > div {
         margin: 0;
         margin: 1.95em 0;
-    }
+    } */
     
-    #hero-our-classes > div:last-child {
+    /* #hero-our-classes > div:last-child {
         padding: 5em 0;
-    }
+    } */
 
-    #hero-home {
+    /* #hero-home {
         position: relative;
         top: 0;
         left: 0;
-    }
+    } */
 }
 
 /* ----- NAVIGATION ----- */
@@ -441,7 +444,7 @@ h2 {
 nav ul {
     text-align: center;
     padding: 0;
-    margin-bottom: 1.15em;
+    /* margin-bottom: 1.15em; */
 }
 
 nav li {
@@ -471,12 +474,12 @@ nav a {
     padding-bottom: .2em;
     }
 
-    nav ul {
+    header nav ul {
         text-align: right;
         margin-top: 2.3em;
     }
 
-    nav a {
+    nav li {
         margin-left: 2.8em;
         font-size: .9rem;
         margin-bottom: 1em;
@@ -499,6 +502,11 @@ footer ul {
     margin: .5em 0 1em;
 }
 
+footer nav li {
+    margin: 0;
+    display: block;
+}
+
 footer img {
     margin-top: 3.9em;
 }
@@ -514,6 +522,7 @@ footer > div:last-child li {
 }
 
 @media screen and (min-width: 1024px) {
+
     footer {
         text-align: left;
     }
@@ -522,12 +531,16 @@ footer > div:last-child li {
         margin: .5em 0 3em;
     }
 
+    footer nav li:first-child a {
+        color: #5E5E5E;
+    }
+
     footer a {
         letter-spacing: .2em;
         line-height: 2.5rem;
     }
 
-    footer a:hover {
+    footer nav a:hover {
         border-bottom: .75px solid #819D45;
         padding-bottom: .2em;;
     }  
@@ -535,10 +548,56 @@ footer > div:last-child li {
     footer > div:last-child a {
         border-bottom: none;
     }
+    
+    footer nav ul {
+        text-align: left;
+    }   
+}
 
-    footer .col-lg-10 > a{
-        border-bottom: none;
+
+/* ----- CLASS LEVELS ----- */
+
+.card-class.vert div:first-child{
+    height: 20em;
+}
+
+/* .card-class.vert {
+    text-align: center;
+    margin-bottom: 3em;
+} */
+
+/* .card-class.vert header + p {
+    margin-top: 0;
+} */
+
+/* .card-class.vert h2 {
+    margin-bottom: 1em;
+} */
+
+@media screen and (min-width: 768px) {
+    .card-class.vert {
+        margin: 0 auto;
     }
+
+    /* .card-class.vert {
+        margin-top: 4em;
+    } */
+}
+
+@media screen and (min-width: 1024px) {
+
+    .card-class.vert h3 {
+        font-size: 1.5rem;
+        /* margin-bottom: .7em; */
+    }
+    /* .card-class.vert h2 {
+        text-align: left; */
+        /* margin-top: 5em;
+    } */
+
+    /* .card-class.vert {
+        margin-bottom: 1em;
+    } */
 }
 
 /* ----- OUR PHILOSOPHY ----- */
@@ -546,9 +605,6 @@ footer > div:last-child li {
 
 #our-philosophy:before {
     background: url(../img/buddha.jpg) no-repeat center;
-    position: absolute;
-    content: '';
-    width: 100%;
     height: 50%;
     bottom: -27em;
     right: 0;
@@ -556,9 +612,6 @@ footer > div:last-child li {
 }
 
 #our-philosophy {
-    position: relative;
-    top: 0;
-    left: 0;
     margin-bottom: 30em;
 }
 
@@ -566,11 +619,11 @@ footer > div:last-child li {
     #our-philosophy {
         left: 4.07em;
         text-align: center;
+        /* margin-bottom: 8em; */
     }
 
     #our-philosophy:before {
         right: 3.95em;
-        width: 100%;
         height: 63%;
         margin-bottom: 2em;
 }
@@ -585,7 +638,6 @@ footer > div:last-child li {
     }
     
     #our-philosophy:before {
-        width: 50%;
         height: 90%;
         top: 0;
         right: 0;
@@ -596,13 +648,12 @@ footer > div:last-child li {
 /* ----- MEMBERSHIPS ----- */
 
 
-#memberships .wrapper section {
-    margin-left: 4em;
+#memberships section:first-child {
+    margin-left: 1em;
     margin-top: 25em;
 }
 
 #memberships .wrapper .row > div:last-child {
-    margin: 3.4em 0 0 1em;
     text-align: right;
 }
 
@@ -610,48 +661,35 @@ footer > div:last-child li {
     font-weight: 600;
 }
 
-#memberships .wrapper .row h3 {
+#memberships h3 {
     color:#819D45;
     font-weight: 500;
-}
-
-#memberships {
-    position: relative;
-    top: 0;
-    left: 0;
 }
 
 #memberships:before {
     background: url(../img/meditation.jpg) no-repeat center;
     height: 21em;
-    width: 100%;
-    position: absolute;
-    content: '';
     top: 0;
     left: 0;
 }
-
 @media screen and (min-width: 768px) {
 
     #memberships {
-        top: -16em;
+        top: 3em;
         left: 11em;
     }
 
-    #memberships section {
+    #memberships section:first-child {
         border-left: 1px solid #819D45;
         padding-left: 3em;
-    }
-
-    #memberships .wrapper section {
-        margin-left: 5em;
+        margin-top: 0;
+        margin-left: 4em;
     }
 
     #memberships:before {
-        top: 25.5em;
+        /* top: 25.5em; */
         left: -35em;
         height: 33em;
-        width: 78%;
     }
 }
 
@@ -662,15 +700,19 @@ footer > div:last-child li {
     }
 
     #memberships:before {
-        width: 50%;
-        height: 93%;
-        top: 1.8em;
-        left: 6em;
+        height: 100%;
+        top: 0em;
+        left: 7em;
+    }
+
+    #memberships .wrapper section section {
+        /* margin-left: 4em; */
+        margin-top: 0em;
     }
 
     #memberships .wrapper .row > div:last-child {
-        margin-top: 3.5em;
-        margin-bottom: 1.5em;
+        /* margin-top: 3.5em; */
+        margin-bottom: 2em;
     }
 
     #memberships .wrapper section {
@@ -680,61 +722,17 @@ footer > div:last-child li {
 
     #memberships {
         text-align: left;
-        left: -6em;
+        left: -14em;
         top: 1em;
     }
-}
 
-
-/* ----- CLASS LEVELS ----- */
-
-#class-levels section:first-child div,
-#class-levels section:nth-child(2) div,
-#class-levels section:last-child div {
-    padding: 9em;
-}
-
-#class-levels section,
-#class-levels > p:last-child,
-#class-levels h2 {
-    text-align: center;
-}
-
-#class-levels section {
-    margin-bottom: 3em;
-}
-
-#class-levels header + p {
-    margin-top: 0;
-}
-
-#class-levels h2 {
-    margin-bottom: 1em;
-}
-
-@media screen and (min-width: 768px) {
-    #class-levels section {
-        margin: 0 auto;
+    #memberships h2 {
+        margin-top: 0;
+        margin-bottom: 2em;
     }
 
-    #class-levels {
-        margin-top: 4em;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    #class-levels h2 {
-        text-align: left;
-        margin-top: 5em;
-    }
-
-    #class-levels h3 {
-        font-size: 1.5rem;
-        margin-bottom: .7em;
-    }
-
-    #class-levels section {
-        margin-bottom: 1em;
+    #memberships h3 {
+        margin: 0;
     }
 }
 
@@ -743,11 +741,6 @@ footer > div:last-child li {
 #class-groupings h3,
 #class-groupings p:first-of-type {
     font-weight: 500;
-}
-
-
-#class-groupings {
-    text-align: center;
 }
 
 #class-groupings h3 {
@@ -770,11 +763,8 @@ footer > div:last-child li {
 }
 
 @media screen and (min-width: 1024px) {
-
+   
     #class-groupings {
-        position: relative;
-        top: 0;
-        left: 0;
         text-align: left;
         border: none;
         margin-left: 0;
@@ -783,10 +773,6 @@ footer > div:last-child li {
 
     #class-groupings > div:last-child {
         background: url(../img/friends.jpg) no-repeat center;
-        background-size: cover;
-        position: absolute;
-        top: 0;
-        right: 0;
         height: 57em;
         width: 47%;
     }
@@ -806,10 +792,6 @@ footer > div:last-child li {
         margin: .3em 0 0;
     }
 
-    /* #class-groupings p:last-of-type {
-        margin: 1.5em 0;
-    } */
-
     #class-groupings p:last-child {
         margin: .3em 0 2em;
         font-size: 1.1rem;
@@ -817,91 +799,129 @@ footer > div:last-child li {
 
 }
 
+/* ----- Positioning ----- */
 
-/* ----- CLASS DESCRIPTION ----- */
-
-#class-description section:first-child > div:first-child,
-#class-description > section:nth-child(2) > div:first-child,
-#class-description > section:last-child > div:first-child {
-    height: 18em;
-}
-
-#class-description h2 {
-    color:#819D45;
-    font-weight: 500;
-    margin-bottom: 0;
-}
-
-#class-description section {
-    margin-bottom: 1em;
-    margin-top: 4.5em;
-}
-
-#class-description p:last-child {
-    margin-top: .5em;
+#memberships:before,
+#our-philosophy:before {
+    position: absolute;
+    content: '';
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
+    #memberships:before {
+        width: 75%;
+        height: 100%;
+    }
+}
 
-    #class-description section:first-child > div:first-child,
-    #class-description > section:nth-child(2) > div:first-child,
-    #class-description > section:last-child > div:first-child {
-        height: 29em;
-    width: 20em;
+@media screen and (min-width: 1024px) {
+    #memberships:before {
+        width: 55%;
     }
 
-    #class-description section:first-child {
+    #our-philosophy:before {
+        width: 50%;
+    }
+    #class-groupings > div:last-child {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+/* ----- CLASS DESCRIPTION ----- */
+
+.card-class div:first-child {
+    height: 18em;
+}
+
+.card-class h2 {
+    color:#819D45;
+    font-weight: 500;
+    /* margin-bottom: 0; */
+}
+
+/* .card-class {
+    margin-bottom: 1em;
+    margin-top: 4.5em;
+} */
+
+/* .card-class p:last-child {
+    margin-top: .5em;
+} */
+
+@media screen and (min-width: 768px) {
+
+    .card-class div:first-child {
+        height: 29em;
+    }
+
+    /* .card-class:first-child {
         margin-bottom: .8em;
     }
 
-    #class-description section:first-child > div:last-child {
+    .card-class:first-child > div:last-child {
         margin-top: 4em;
-    }
+    } */
 
-    #class-description .lg-numbers {
+    /* .card-class .lg-numbers {
         margin-top: .3em;
-    }
+    } */
 
 }
 
 @media screen and (min-width: 1024px) {
 
-    #class-description {
+    /* .card-class {
         margin-top: 8em;
-    }
-    
-    /* #class-description section,
-    #class-description section:first-child {
-        margin-bottom: 5em;
     } */
 
-    #class-description section:first-child > div:first-child,
-    #class-description > section:nth-child(2) > div:first-child,
-    #class-description > section:last-child > div:first-child {
-        height: 25em;
-        width: 30em;
+    .card-class div:first-child {
+        height: 24.5em;
     }
 
-    #class-description section div {
-        margin-right: 6em;
-    }   
+    /* .card-class.vert div.lg-numbers {
+        margin-top: 1.5em;
+    } */
+
+    .card-class  {
+        justify-content: flex-start;
+    }  
+    .card-class div:first-child  {
+        margin-right: calc(40% * 1 / 12);
+        margin-bottom: 2em;
+    }
 }
 
 /* ----- STUDIO ETIQUETTE ----- */
 
 #etiquette li {
     list-style-type: initial;
-    line-height: 2rem;
     margin-bottom: 1.4em;
 }
 
 #etiquette ul {
     padding-left: 0;
-    margin-bottom: 0;
 }
 
 #etiquette ul:first-child li:last-child  {
     margin-bottom: 0;
+}
+
+@media screen and (min-width: 768px) {
+    
+    #etiquette ul:first-child {
+        margin-right: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #etiquette ul:first-child {
+        margin-right: 3em;
+    }
 }
 
 /* ----- BORDERS ----- */
@@ -912,76 +932,97 @@ footer > div:last-child li {
     padding: .05em;
 }
 
-.border-green .col-sm-8  {
-    margin-bottom: 4em;
-}
-
-.border-green .col-sm-2 {
-    display: none;
-}
-
-@media screen and (min-width: 768px) {
-
-}
-
 @media screen and (min-width: 1024px) {
-
-    .border-green .col-lg-5 {
-        margin-bottom: 9em;
-    }
-
-    .col-sm-8 {
+    div.col-sm-8.border-green {
         display: none;
     }
+
+    /* div.border-green.col-sm-10.col-md-5 {
+        padding-top: 10em;
+    } */
 }
+
+/* @media screen and (min-width: 1024px) {
+    div.col-sm-8.col-center {
+        margin: 0;
+    }
+} */
 
 /* ----- IMAGES ----- */
 
-#class-description > section:nth-child(2) > div:first-child,
-#class-levels section:nth-child(2) div{
+/* .card-class:nth-child(2) > div:first-child
+.card-class:first-child > div:first-child
+.card-class:last-child > div:first-child {
+    width: 50%;
+} */
+
+.card-class:nth-child(2) > div:first-child {
     background: url(../img/stretch.jpg) no-repeat center;
 }
 
-#class-description > section:last-child > div:first-child {
-    background: url(../img/yoga-class.jpg) no-repeat center;
-}
-
-#class-levels section:first-child div,
-#class-description section:first-child > div:first-child{
+.card-class:first-child > div:first-child{
     background: url(../img/outdoor-class.jpg);
 }
 
-#class-levels section:last-child div,
-#class-description > section:last-child > div:first-child {
+.card-class:last-child > div:first-child {
     background: url(../img/yoga-class.jpg) no-repeat center;
 }
 
-#hero-home > div:last-child,
-#hero-home > div:nth-child(2),
-#hero-our-classes > div:last-child,
+/* @media screen and (min-width: 1024px) {
+    .card-class:nth-child(2) > div:first-child
+    .card-class:first-child > div:first-child
+    .card-class:last-child > div:first-child {
+        width: 50%;
+}
+} */
+
+@media screen and (min-width: 768px) {
+    .card-class:first-child > div:first-child{
+        background: url(../img/outdoor-class.jpg);
+        margin-bottom: 2.5em;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) {
+    .card-class:nth-child(2) > div:first-child
+    .card-class:first-child > div:first-child
+    .card-class:last-child > div:first-child {
+        width: 50%;
+    }
+}
+
+
+#class-groupings > div:last-child,
+#hero-home,
+#hero-our-classes,
 #our-philosophy:before,
 #memberships > div:first-child div,
-#class-levels section:first-child div,
-#class-levels section:nth-child(2) div,
-#class-levels section:last-child div,
-#class-description section:first-child > div:first-child,
-#class-description > section:last-child > div:first-child,
-#class-description > section:nth-child(2) > div:first-child {
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    -o-background-size: cover;
-    -ms-background-size: cover;
-    background-size: cover;
+.card-class div:first-child {
+    -moz-background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -o-background-size: cover !important;
+    -ms-background-size: cover  !important;
+    background-size: cover !important;
 }
 
 /*--------------------------------------------------------------
     7.0 - UTILITIES
 -------------------------------------------------------------- */
 
+.txt-center {
+    text-align: center;
+}
+/* 
 .col-center {
     margin: 0 auto;
-}
+} */
 
+.pos-relative {
+    position: relative;
+    top: 0;
+    left: 0;
+}
 .sr-only {
     position:absolute;
     left:-10000px;
@@ -1045,6 +1086,7 @@ footer > div:last-child li {
     .fa-angle-down {
         color: #fff;
         font-size: 3.5rem;
+        margin: 0;
     }
 }
 

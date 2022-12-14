@@ -13,9 +13,9 @@
 </head>
 
 <body>
-    <header id="hero-home">
+    <header>
         <div class="wrapper row">
-            <div class="col-sm-12 col-lg-1">
+            <div class="col-sm-12 col-lg-3 txt-center">
                 <h1>
                     <a href="#"><img src="img/good-vibes-logo@2x.jpg" alt="good-vibes" data-rjs="2" width="150"></a>
                 </h1>
@@ -31,22 +31,23 @@
             </nav>
         </div>
 
-        <div>
+        <div id="hero-home">
             <div class="wrapper">
-                <div class="col-lg-9">
+                <div>
                     <p>A community of wellness<br> &amp; yoga aiming to<br> cultivate good vibes</p>
                     <p><a href="#" class="btn">Schedule a class now</a></p>
+                </div>
+                <div>
+                    <a href="#our-philosophy"><i class="fa-solid fa-angle-down"></i></a>
                 </div>
             </div>
         </div>
 
-        <div>
-            <a href="#our-philosophy"><i class="fa-solid fa-angle-down"></i></a>
-        </div>
+
     </header>
 
     <main>
-        <section id="our-philosophy">
+        <section id="our-philosophy" class="pos-relative">
             <div class="wrapper">
                 <div class="col-sm-12 col-md-10 col-lg-5">
                     <header>
@@ -58,17 +59,22 @@
             </div>
         </section>
 
-        <div class="border-green col-sm-2 col-md-5">
-        </div>
+        <!-- <div class="wrapper">
+            <div class="border-green col-sm-2 col-md-5"></div>
+            </div>
+        </div> -->
 
-        <section class="wrapper" id="class-levels">
+        <section class="wrapper txt-center">
+
+            <div class="border-green col-sm-11 col-md-5"></div>
+
             <header>
                 <h2>
                     Class Levels
                 </h2>
             </header>
             <div class="row">
-                <section class="col-sm-12 col-md-8 col-lg-4">
+                <section class="col-sm-12 col-md-8 col-lg-4 card-class vert">
                     <div>
                         <!-- img -->
                     </div>
@@ -79,7 +85,7 @@
                     <p>Normal room temperature, supported and slower paced, guided explanations, avoiding advances postures. Great for first timers.</p>
                 </section>
 
-                <section class="col-sm-12 col-md-8 col-lg-4">
+                <section class="col-sm-12 col-md-8 col-lg-4 card-class vert">
                     <div>
                         <!-- img -->
                     </div>
@@ -87,10 +93,10 @@
                     <header>
                         <h3>Warm Vinyasa</h3>
                     </header>
-                    <p>85-88 degree temperature. Has more pace and attempts some challenging postures. Open level & definitely fine if you've practiced before.</p>
+                    <p>85 &#8211; 88 degree temperature. Has more pace and attempts some challenging postures. Open level & definitely fine if you've practiced before.</p>
                 </section>
                 
-                <section class="col-sm-12 col-md-8 col-lg-4">
+                <section class="col-sm-12 col-md-8 col-lg-4 card-class vert">
                     <div>
                         <!-- img -->
                     </div>
@@ -98,25 +104,24 @@
                     <header>
                         <h3>Hot Vinyasa</h3>
                     </header>
-                    <p>95-105 degree temperature. Has pace, more detail & challenging postures. Inlcuding arm balances and active inveresions. </p>
+                    <p>95 &#8211; 105 degree temperature. Has pace, more detail & challenging postures. Inlcuding arm balances and active inveresions. </p>
                 </section>
             </div>
             <p><a href="#" class="btn">View class schedule</a></p>
         </section>
 
-        <div id="memberships">   
+        <div id="memberships" class="pos-relative">   
             <div class="wrapper row">
-                <div class="col-sm-10 col-md-8 col-lg-4">
+                <section class="col-sm-10 col-md-8 col-lg-4">
+                    <header>
+                        <h2>Memberships</h2>
+                    </header>
                     <section>
                         <header>
-                            <h2>Memberships</h2>
+                            <h3>Packages</h3>
                         </header>
-
                         <div class="row">
                             <div>
-                                <header>
-                                    <h3>Packages</h3>
-                                </header>
                                 <p>Single Class</p>
                                 <p>10 Classes</p>
                                 <p>20 Classes</p>
@@ -127,12 +132,13 @@
                                 <p>200</p>
                             </div>
                         </div>
-
+                    </section>
+                    <section>
+                        <header>
+                            <h3>Unlimited</h3>
+                        </header>
                         <div class="row">
                             <div>
-                                <header>
-                                    <h3>Unlimited</h3>
-                                </header>
                                 <p>Single Month</p>
                                 <p>Monthly</p>
                                 <p>One Year</p>
@@ -143,10 +149,9 @@
                                 <p>1200</p>
                             </div>
                         </div>
-                        
-                        <p><a href="#" class="btn">Sign Up Now</a></p>
                     </section>
-                </div>
+                    <p><a href="#" class="btn">Sign Up Now</a></p>
+                </section>
             </div>
             
         </div>
@@ -165,17 +170,20 @@
         </section>
     </main>
 
-    <div class="col-sm-8 border-green">
-    </div>  
-
     <footer class="wrapper row">
+        <div class="col-sm-8 col-lg-12 border-green">
+
+        </div>  
+
         <div class="col-sm-12 col-lg-10">
             <a href="#"><img src="img/good-vibes-logo@2x.jpg" alt="good-vibes" data-rjs="2" width="150"></a>
-            <ul>
-                <li><a href="classes.html">Classes</a></li>
-                <li><a href="#">Schedule</a></li>
-                <li><a href="#">Memberships</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="#">Schedule</a></li>
+                    <li><a href="#">Memberships</a></li>
+                </ul>
+            </nav>
         </div>
 
         <div class="col-sm-12 col-lg-2">
