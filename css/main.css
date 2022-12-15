@@ -9,12 +9,23 @@
         - Universal
 4.0 - Elements: styling for bare/generic HTML elements 
         - Typography: Headings, Paragraphs, Blockquotes, Anchors
-
 5.0 - Objects: class-based selectors which define undecorated design patterns, building blocks
         - Framework
 6.0 - Components: specific designed components
-
+        - Hero
+        - Navigation
+        - Footer
+        - Our Philosophy
+        - Memberships
+        - Class Groupings
+        - Positioning
+        - Kombucha
+        - Studio Etiquette
+        - Borders
+        - Card Class
 7.0 - Utilities: utilities and helper classes with ability to override anything which goes before in the triangle, eg. hide helper class   
+        - Buttons 
+        - Icons
 
 --------------------------------------------------------------*/
 
@@ -38,8 +49,7 @@
 }
 
 html {
-    font-size: .95rem;
-    font-family: 'Poppins', sans-serif;
+    font: .95rem 'Poppins', sans-serif;
     line-height: 2rem;
 }
 
@@ -61,29 +71,21 @@ h3 {
     font-weight: 400;
 }
 
+li {
+    list-style-type: none;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* ----- TYPOGRAPHY ----- */
+
 a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
 }
-
-li {
-    list-style-type: none;
-}
-
-@media screen and (min-width: 1024px) {
- 
-    img {
-        margin-top: .35em;
-    }
-}
-
-/* ----- TYPOGRAPHY ----- */
-
-/* 
-h1 {
-    text-align: left;
-} */
 
 h2 {
     font-size: 1.5rem;
@@ -165,18 +167,18 @@ h2 {
 
 @media screen and (min-width: 768px) {
 
-        .wrapper {
-                width: 85%;
-        }
+    .wrapper {
+            width: 85%;
+    }
 
-        [class*='col-'] {
-                padding: 8px;
-        }
+    [class*='col-'] {
+            padding: 8px;
+    }
 
-        [class*='col-'] [class*='col-'] {
-                margin-left: -8px;
-                margin-right: -8px;
-        }
+    [class*='col-'] [class*='col-'] {
+            margin-left: -8px;
+            margin-right: -8px;
+    }
 
     .col-md-1 {
         width: calc(100% * 1 / 12);
@@ -217,18 +219,18 @@ h2 {
 }
 
 @media screen and (min-width: 1024px) {
-        .wrapper {
-                width: 85%;
-        }
+    .wrapper {
+            width: 85%;
+    }
 
-        [class*='col-'] {
-                padding: 5px;
-        }
+    [class*='col-'] {
+            padding: 5px;
+    }
 
-        [class*='col-'] [class*='col-'] {
-                margin-left: -5px;
-                margin-right: -5px;
-        }
+    [class*='col-'] [class*='col-'] {
+            margin-left: -5px;
+            margin-right: -5px;
+    }
 
     .col-lg-1 {
         width: calc(100% * 1 / 12);
@@ -272,7 +274,6 @@ h2 {
     6.0 - COMPONENTS
 -------------------------------------------------------------- */
 
-
 #our-philosophy,
 #memberships,
 #class-groupings  {
@@ -281,9 +282,9 @@ h2 {
 
 #kombucha,
 #etiquette {
-    margin: 4em 0 0;
     background-color: #E9EFDB;
     padding: 4em 0;
+    margin: 4em 0 5em;
 }
 
 .lg-numbers {
@@ -292,9 +293,11 @@ h2 {
     color: #BDD191;
     margin: .8em 0 .5em;
 }
-
-#kombucha p:last-child {
-    margin-top: 1.7em;
+@media screen and (min-width: 768px) {
+    #kombucha,
+    #etiquette {
+        margin: 4em 0 2em;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -312,7 +315,6 @@ h2 {
 
     .lg-numbers {
         font-size: 4rem;
-        /* margin: 1.5em 0 .8em; */
     }
 }
 
@@ -323,10 +325,18 @@ h2 {
     text-align: center;
 }
 
-#hero-home h1 {
-    margin: 1.25em 0 .25em 0;
+#hero-home h1,
+#hero-our-classes h1 {
     text-align: left;
-    /* margin: 4em 0; */
+}
+
+#hero-home {
+    background: url(../img/new-hero.jpg) no-repeat center;
+    padding: 3em 0 0;
+}
+
+#hero-our-classes  {
+    background: url(../img/succulent.jpg) no-repeat center;
 }
 
 #hero-home p:first-child {
@@ -341,71 +351,47 @@ h2 {
     margin-bottom: 2.8em;
 }
 
-#hero-home {
-    background: url(../img/hero-lg.jpg) no-repeat center;
-    padding: 3em 0 0;
-}
-
-/* #hero-home .wrapper div:last-child {
-    display: none;
-} */
-
-/* #hero-our-classes > div > div {
-    margin-top: 2.5em;
-} */
-
-#hero-our-classes  {
-    background: url(../img/succulent.jpg) no-repeat center;
-    /* padding: 3em 0; */
-}
-
 #hero-our-classes h1 {
-    margin: 3em 0;
+    padding: 2.4em 0;
 }
 
-/* #hero-our-classes h1 {
-    padding: 3em 0;
-} */
-
-#hero-our-classes nav ul {
-    margin: 1.15em 0 1.4em;
+header .wrapper {
+    margin-top: 2em;
 }
 
 @media screen and (min-width: 768px) {
+
+    header .wrapper {
+        margin-top: 1em;
+    }
 
     #hero-home {
         padding: 3em;
     }
 
+    #hero-our-classes h1 {
+        text-align: left;
+    }
+
     #hero-home p:first-child {  
-        /* margin: 2em 1.5em 0em 1em; */
         font-size: 2.4rem;
         line-height: 3.3rem;
     }
-
-    /* #hero-home p:last-child {
-        margin-left: 2.2em;
-    } */
 }
 
 @media screen and (min-width: 1024px) {
 
+    header .wrapper {
+        margin-top: 0;
+    }
+
     #hero-home {
         padding: 12em 0 1em;
     }
-
-    #hero-home h1 {
-        margin-top: .8em;
-    }
-
-    /* #hero-home img {
-        text-align: left;
-    } */
     
     #hero-home p:first-child {
         font-size: 3.5rem;
         line-height: 4.4rem;
-        /* margin: 5em .5em 0.5em 0; */
     }
 
     #hero-home p:last-child {
@@ -420,23 +406,17 @@ h2 {
 
     #hero-our-classes h1 {
         font-size: 3em;
-        /* margin: 3em 0; */
+        margin: 1.5em 0;
     }
-    
-    /* #hero-our-classes > div > div {
-        margin: 0;
-        margin: 1.95em 0;
-    } */
-    
-    /* #hero-our-classes > div:last-child {
-        padding: 5em 0;
-    } */
 
-    /* #hero-home {
-        position: relative;
-        top: 0;
-        left: 0;
-    } */
+    header .txt-center {
+        text-align: left;
+        margin-top: .5em;
+    }
+
+    header .row {
+        align-items: center;
+    }
 }
 
 /* ----- NAVIGATION ----- */
@@ -444,13 +424,12 @@ h2 {
 nav ul {
     text-align: center;
     padding: 0;
-    /* margin-bottom: 1.15em; */
 }
 
 nav li {
     display: inline-block;
     margin: 0 .5em .6em .5em;
-    font-size: .85em;
+    font-size: 1rem;
 }
 
 nav li:first-child a {
@@ -459,14 +438,19 @@ nav li:first-child a {
 
 nav a {
     color: #5E5E5E;
-    letter-spacing: .2em;
+    letter-spacing: .15em;
 }
 
-@media screen and (min-width: 1024px) {
-
-    nav {
-        margin-bottom: 1em;
+@media screen and (min-width: 768px) {
+    nav ul {
+        text-align: center;
+        padding: 0;
+        margin-top: 0;
     }
+}
+
+
+@media screen and (min-width: 1024px) {
     
     nav a:hover,
     nav li:first-child a:hover {
@@ -476,44 +460,44 @@ nav a {
 
     header nav ul {
         text-align: right;
-        margin-top: 2.3em;
+        margin-top: 2.1em;
     }
 
     nav li {
-        margin-left: 2.8em;
+        margin-left: 1.5em;        
         font-size: .9rem;
         margin-bottom: 1em;
     }
 
     #hero-our-classes nav ul {
-        margin-top: 2.3em;
+        margin-top: 2.1em;
     }
 }
 
 /* ----- FOOTER ----- */
 
-
 footer {
     text-align: center;
 }
 
+footer img {
+    margin-top: 4em;
+    margin-bottom: 0;
+}
+
 footer ul {
     padding-left: 0;
-    margin: .5em 0 1em;
+    margin: 2em 0 0em;
 }
 
 footer nav li {
-    margin: 0;
+    margin: 0.7em 0;
     display: block;
-}
-
-footer img {
-    margin-top: 3.9em;
 }
 
 footer a {
     letter-spacing: .1em;
-    font-size: .9em;
+    font-size: 1rem;
     color: #5E5E5E;
 }
 
@@ -521,23 +505,40 @@ footer > div:last-child li {
     display: inline-block;
 }
 
+footer nav li:first-child a {
+    color: #5E5E5E;
+}
+
+@media screen and (min-width: 768px) {
+    footer img {
+        margin-top: 0;
+    }
+
+    footer nav li {
+        margin: 0;
+
+    }
+}
+
 @media screen and (min-width: 1024px) {
 
-    footer {
+    footer,
+    footer nav ul {
         text-align: left;
+    }
+
+    footer img {
+        margin-top: 3.9em;
     }
 
     footer ul {
         margin: .5em 0 3em;
     }
 
-    footer nav li:first-child a {
-        color: #5E5E5E;
-    }
-
     footer a {
         letter-spacing: .2em;
         line-height: 2.5rem;
+        font-size: .9rem;
     }
 
     footer nav a:hover {
@@ -548,57 +549,8 @@ footer > div:last-child li {
     footer > div:last-child a {
         border-bottom: none;
     }
-    
-    footer nav ul {
-        text-align: left;
-    }   
 }
 
-
-/* ----- CLASS LEVELS ----- */
-
-.card-class.vert div:first-child{
-    height: 20em;
-}
-
-/* .card-class.vert {
-    text-align: center;
-    margin-bottom: 3em;
-} */
-
-/* .card-class.vert header + p {
-    margin-top: 0;
-} */
-
-/* .card-class.vert h2 {
-    margin-bottom: 1em;
-} */
-
-@media screen and (min-width: 768px) {
-    .card-class.vert {
-        margin: 0 auto;
-    }
-
-    /* .card-class.vert {
-        margin-top: 4em;
-    } */
-}
-
-@media screen and (min-width: 1024px) {
-
-    .card-class.vert h3 {
-        font-size: 1.5rem;
-        /* margin-bottom: .7em; */
-    }
-    /* .card-class.vert h2 {
-        text-align: left; */
-        /* margin-top: 5em;
-    } */
-
-    /* .card-class.vert {
-        margin-bottom: 1em;
-    } */
-}
 
 /* ----- OUR PHILOSOPHY ----- */
 
@@ -612,14 +564,13 @@ footer > div:last-child li {
 }
 
 #our-philosophy {
-    margin-bottom: 30em;
+    margin-bottom: 34em;
 }
 
 @media screen and (min-width: 768px) {
     #our-philosophy {
         left: 4.07em;
         text-align: center;
-        /* margin-bottom: 8em; */
     }
 
     #our-philosophy:before {
@@ -642,11 +593,9 @@ footer > div:last-child li {
         top: 0;
         right: 0;
     }
-
 }
 
 /* ----- MEMBERSHIPS ----- */
-
 
 #memberships section:first-child {
     margin-left: 1em;
@@ -664,6 +613,7 @@ footer > div:last-child li {
 #memberships h3 {
     color:#819D45;
     font-weight: 500;
+    margin-bottom: 0;
 }
 
 #memberships:before {
@@ -682,18 +632,21 @@ footer > div:last-child li {
     #memberships section:first-child {
         border-left: 1px solid #819D45;
         padding-left: 3em;
-        margin-top: 0;
-        margin-left: 4em;
+        margin: 0 0 0 4em;
     }
 
     #memberships:before {
-        /* top: 25.5em; */
         left: -35em;
         height: 33em;
     }
 }
 
 @media screen and (min-width: 1024px) {
+
+    #memberships .wrapper section,
+    #memberships h3 {
+        margin: 0;
+    }
 
     #memberships > .row {
         justify-content: flex-end;
@@ -706,18 +659,11 @@ footer > div:last-child li {
     }
 
     #memberships .wrapper section section {
-        /* margin-left: 4em; */
         margin-top: 0em;
     }
 
     #memberships .wrapper .row > div:last-child {
-        /* margin-top: 3.5em; */
         margin-bottom: 2em;
-    }
-
-    #memberships .wrapper section {
-        margin-top: 0;
-        margin-left: 0;
     }
 
     #memberships {
@@ -727,12 +673,7 @@ footer > div:last-child li {
     }
 
     #memberships h2 {
-        margin-top: 0;
-        margin-bottom: 2em;
-    }
-
-    #memberships h3 {
-        margin: 0;
+        margin: 0 0 2em 0;
     }
 }
 
@@ -746,12 +687,17 @@ footer > div:last-child li {
 #class-groupings h3 {
     color: #819D45;
     margin-bottom: 0;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 #class-groupings p:first-of-type {
-    margin: .3em 0 0;
-    font-size: 1.15rem;
+    margin: .3em 0 .5em;
+    font-size: 1.2rem;
+}
+
+#class-groupings section {
+    margin-bottom: 3em;
+    padding-left: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -760,46 +706,41 @@ footer > div:last-child li {
         margin-left: 6em;
         border-left: 1px solid #819D45;
     }
+
+    #class-groupings section {
+        margin-bottom: 0;
+    }
 }
 
 @media screen and (min-width: 1024px) {
    
     #class-groupings {
-        text-align: left;
         border: none;
         margin-left: 0;
-        margin-bottom: 10em;
     }
 
     #class-groupings > div:last-child {
         background: url(../img/friends.jpg) no-repeat center;
-        height: 57em;
+        height: 100%;
         width: 47%;
     }
 
     #class-groupings h3 {
         font-size: 1.6rem;
-        font-weight: 500;
     }
 
     #class-groupings h2 {
         font-size: 1.8rem;
-    }
-
-    #class-groupings p:first-of-type {
-        font-weight: 500;
-        font-size: 1.15rem;
-        margin: .3em 0 0;
+        margin-bottom: 1em;
     }
 
     #class-groupings p:last-child {
         margin: .3em 0 2em;
-        font-size: 1.1rem;
+        font-size: 2rem;
     }
-
 }
 
-/* ----- Positioning ----- */
+/* ----- POSITIONING ----- */
 
 #memberships:before,
 #our-philosophy:before {
@@ -811,13 +752,12 @@ footer > div:last-child li {
 @media screen and (min-width: 768px) {
     #memberships:before {
         width: 75%;
-        height: 100%;
     }
 }
 
 @media screen and (min-width: 1024px) {
     #memberships:before {
-        width: 55%;
+        width: 50%;
     }
 
     #our-philosophy:before {
@@ -830,68 +770,19 @@ footer > div:last-child li {
     }
 }
 
+/* ----- KOMBUCHA ----- */
 
-/* ----- CLASS DESCRIPTION ----- */
-
-.card-class div:first-child {
-    height: 18em;
+#kombucha p:last-child {
+    margin-top: 1.7em;
 }
 
-.card-class h2 {
-    color:#819D45;
-    font-weight: 500;
-    /* margin-bottom: 0; */
+#kombucha {
+    text-align: center;
 }
-
-/* .card-class {
-    margin-bottom: 1em;
-    margin-top: 4.5em;
-} */
-
-/* .card-class p:last-child {
-    margin-top: .5em;
-} */
 
 @media screen and (min-width: 768px) {
-
-    .card-class div:first-child {
-        height: 29em;
-    }
-
-    /* .card-class:first-child {
-        margin-bottom: .8em;
-    }
-
-    .card-class:first-child > div:last-child {
-        margin-top: 4em;
-    } */
-
-    /* .card-class .lg-numbers {
-        margin-top: .3em;
-    } */
-
-}
-
-@media screen and (min-width: 1024px) {
-
-    /* .card-class {
-        margin-top: 8em;
-    } */
-
-    .card-class div:first-child {
-        height: 24.5em;
-    }
-
-    /* .card-class.vert div.lg-numbers {
-        margin-top: 1.5em;
-    } */
-
-    .card-class  {
-        justify-content: flex-start;
-    }  
-    .card-class div:first-child  {
-        margin-right: calc(40% * 1 / 12);
-        margin-bottom: 2em;
+    #kombucha {
+        text-align: left;
     }
 }
 
@@ -900,12 +791,14 @@ footer > div:last-child li {
 #etiquette li {
     list-style-type: initial;
     margin-bottom: 1.4em;
+    font-size: .9rem;
 }
 
 #etiquette ul {
     padding-left: 0;
 }
 
+#etiquette h2,
 #etiquette ul:first-child li:last-child  {
     margin-bottom: 0;
 }
@@ -914,6 +807,12 @@ footer > div:last-child li {
     
     #etiquette ul:first-child {
         margin-right: 1.5em;
+    }
+
+    #etiquette li {
+        list-style-type: initial;
+        margin-bottom: 1.4em;
+        font-size: initial;
     }
 }
 
@@ -928,77 +827,142 @@ footer > div:last-child li {
 
 .border-green {
     background-color: #BDD191;
-    margin: 0 auto;
     padding: .05em;
+    margin: 5rem auto;
 }
 
-@media screen and (min-width: 1024px) {
+div.col-sm-8.border-green {
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+
     div.col-sm-8.border-green {
         display: none;
     }
-
-    /* div.border-green.col-sm-10.col-md-5 {
-        padding-top: 10em;
-    } */
-}
-
-/* @media screen and (min-width: 1024px) {
-    div.col-sm-8.col-center {
-        margin: 0;
-    }
-} */
-
-/* ----- IMAGES ----- */
-
-/* .card-class:nth-child(2) > div:first-child
-.card-class:first-child > div:first-child
-.card-class:last-child > div:first-child {
-    width: 50%;
-} */
-
-.card-class:nth-child(2) > div:first-child {
-    background: url(../img/stretch.jpg) no-repeat center;
-}
-
-.card-class:first-child > div:first-child{
-    background: url(../img/outdoor-class.jpg);
-}
-
-.card-class:last-child > div:first-child {
-    background: url(../img/yoga-class.jpg) no-repeat center;
-}
-
-/* @media screen and (min-width: 1024px) {
-    .card-class:nth-child(2) > div:first-child
-    .card-class:first-child > div:first-child
-    .card-class:last-child > div:first-child {
-        width: 50%;
-}
-} */
-
-@media screen and (min-width: 768px) {
-    .card-class:first-child > div:first-child{
-        background: url(../img/outdoor-class.jpg);
-        margin-bottom: 2.5em;
-    }
     
+    .border-green {
+        margin: 2rem auto;
+    }
 }
 
 @media screen and (min-width: 1024px) {
-    .card-class:nth-child(2) > div:first-child
-    .card-class:first-child > div:first-child
-    .card-class:last-child > div:first-child {
-        width: 50%;
+
+    .border-green {
+        margin: 10rem auto;
     }
 }
 
+/* ----- CARD CLASS ----- */
+
+.card-class > #bg-stretch {
+    background: url(../img/stretch.jpg) no-repeat center;
+}
+
+.card-class > #bg-outdoor-class {
+    background: url(../img/outdoor-class.jpg) no-repeat center;
+}
+
+.card-class > #bg-yoga-class {
+    background: url(../img/yoga-class.jpg) no-repeat center;
+}
+
+section.card-class {
+    margin-bottom: 2em;
+}
+
+.card-class div:first-child {
+    height: 20em;
+}
+
+.card-class h2 {
+    color:#819D45;
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.card-class div.col-sm-12 p:last-child {
+    margin-top: .3em;
+}
+
+section.txt-center h2 {
+    margin-bottom: 1em;
+}
+
+.card-class.vert div:first-child{
+    height: 21em;
+}
+
+section.card-class.vert {
+    margin-bottom: 2em;
+}
+
+.card-class.vert .lg-numbers {
+    margin-bottom: .3em;
+}
+
+.card-class.vert h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+    .card-class.vert {
+        margin: 0 auto;
+    }
+
+    .card-class.vert .lg-numbers {
+        margin-bottom: .5em;
+        margin-top: 1em;
+    }
+
+    .card-class div:first-child {
+        height: auto;
+    }
+
+    section.txt-center h2 {
+        margin-bottom: 2em;
+    }
+
+    .card-class.vert h3 {
+        font-size: 1.5rem;
+        margin: 1.8em 0 0 0;
+    }
+
+    .card-class.vert > p:last-child {
+        margin-top: .6em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    .card-class  {
+        justify-content: flex-start;
+    }  
+
+    .card-class div:first-child  {
+        margin-right: calc(40% * 1 / 12);
+        margin-bottom: 2em;
+    }
+
+    .card-class .lg-numbers {
+        margin-top: 0.1em;
+    }
+
+    section.card-class {
+        margin-left: 4em;
+    }
+}
 
 #class-groupings > div:last-child,
 #hero-home,
 #hero-our-classes,
 #our-philosophy:before,
 #memberships > div:first-child div,
-.card-class div:first-child {
+.card-class div:first-child,
+.card-class:nth-child(2) > div:first-child {
     -moz-background-size: cover !important;
     -webkit-background-size: cover !important;
     -o-background-size: cover !important;
@@ -1013,10 +977,6 @@ footer > div:last-child li {
 .txt-center {
     text-align: center;
 }
-/* 
-.col-center {
-    margin: 0 auto;
-} */
 
 .pos-relative {
     position: relative;
@@ -1037,7 +997,7 @@ footer > div:last-child li {
 .btn {
     background-color: #fff;
     color: #2B5913;
-    padding: .8em 2em;
+    padding: 1.1em 2.8em;
     font-size: .75rem;
     font-weight: 500;
     letter-spacing: .1em;
@@ -1080,7 +1040,7 @@ footer > div:last-child li {
 @media screen and (min-width: 1024px) {
     [class^="fa"]{
         font-size: 1.4rem;
-        margin: 8.4em .4em 0 0;
+        margin: 8.4em .3em 0 0;
     }
 
     .fa-angle-down {
